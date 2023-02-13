@@ -14,7 +14,48 @@
     <link type="text/css" rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>weather</h1>
-    <script src="index.js"></script>
+    <div class="container">
+      <h1>weather</h1>
+      <div class="row">
+        <div class="col-5">
+          <form id="user-input">
+            <label for="location">Enter your location</label>
+            <input id="data-input" type="search" autofocus />
+            <input type="submit" value="search" class="btn btn-primary" />
+          </form>
+        </div>
+        <div class="col-1" id="precise location">
+          <button class="btn btn-primary">here</button>
+        </div>
+      </div>
+      <div class="col-3" id="location">
+        <ul>
+          <li>results for: Bath</li>
+          <li>Monday 18:45</li>
+          <li>clear</li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" />
+        </div>
+        <div class="col-2">
+          <div id="temp-icon">
+            6
+            <span class="units">
+              <a href="#" id="celsiusB">°C</a>
+              <span class="pipe">|</span>
+              <a href="#" id="fahrenheitB">°F</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-1">
+          <div>Precipitation:</div>
+          <div>Humidity:</div>
+          <div>Wind::</div>
+        </div>
+      </div>
+      <script src="index.js"></script>
+    </div>
   </body>
 </html>

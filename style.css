@@ -1,3 +1,21 @@
 h1 {
   color: blueviolet;
+  font-size: 50px;
+}
+
+button {
+  margin-left: -65px;
+  margin-top: 1px;
+  margin-bottom: 10px;
+}
+ul {
+  list-style: none;
+}
+#temp-icon {
+  font-size: 48px;
+}
+.units {
+  font-size: 20px;
+  position: relative;
+  bottom: 20px;
 }
