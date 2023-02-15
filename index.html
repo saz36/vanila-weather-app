@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link type="text/css" rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -30,29 +31,26 @@
           </div>
         </div>
         <div class="col-3" id="location">
-           
-            <div id="results">results for: Bath</div>
-            <div id ="date">Monday 18:45</div>
-            <div id ="description">clear</div>
-          
+          <div id="results">results for:</div>
+          <div id="date">Monday 18:45</div>
+          <div id="description"></div>
         </div>
         <div class="row">
           <div class="col-2" id="pic-icon">
             <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" />
           </div>
-          <div class="col-2">
-            <div id="temp-icon">6
-              <span class="units">
-                °C
-                <span class="pipe">|</span>
-                <a href="#" id="fahrenheitB">°F</a>
-              </span>
-            </div>
+          <div class="col-3">
+            <div id="temp-icon"></div>
+            <span class="units">
+              °C
+              <span class="pipe">|</span>
+              <a href="#" id="fahrenheitB">°F</a>
+            </span>
           </div>
-          <div class="col-3"id="info">
-            <div>Precipitation:</div>
-              <div>Humidity:</div>
-              <div>Wind</div>
+          <div class="col-3">
+            <ul id="info">
+              <li>Humidity: <span id="humidity"></span> %</li>
+              <li>Wind: <span id="wind"></span>KM/h</li>
             </ul>
           </div>
         </div>
