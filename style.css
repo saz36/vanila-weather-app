@@ -1,34 +1,77 @@
 .weather-app {
-  max-width: 1000px;
-  margin: 0, auto;
+  max-width: 600px;
+  margin-top: 50px;
+  margin-left: 20px;
+  border: 1px solid #dadce0;
 }
 
 h1 {
   color: #0c66eb;
   font-size: 50px;
+  padding-left: 20px;
 }
-
+form {
+  padding-left: 20px;
+}
 button {
   margin-left: -65px;
   margin-top: 1px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
-ul {
-  list-style: none;
-  margin-top: 10px;
-  margin-left: -30px;
-}
-#temp-icon {
-  font-size: 48px;
-}
-.units {
-  font-size: 20px;
-  position: relative;
-  bottom: 20px;
-}
-
 #locate-button {
   position: relative;
-  left: -3px;
+  left: 45px;
   top: 23px;
+}
+
+#results {
+  color: #70757a;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: -30px;
+  padding-left: 50px;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+#date,
+#description {
+  color: #70757a;
+  font-size: 16px;
+  line-height: 20px;
+  margin-left: -30px;
+  padding-left: 50px;
+  font-family: arial, sans-serif;
+}
+
+#pic-icon {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  height: 60px;
+
+  width: 80px;
+}
+#temp-icon {
+  display: inline;
+
+  font-family: Google Sans, arial, sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  color: #202124;
+  padding-bottom: 20px;
+}
+
+.units {
+  font-size: 13px;
+  line-height: 24px;
+  position: relative;
+  bottom: 24px;
+  left: -11px;
+}
+#info {
+  color: #70757a;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
 }

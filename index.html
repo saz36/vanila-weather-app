@@ -18,7 +18,7 @@
       <div class="weather-app">
         <h1>weather</h1>
         <div class="row">
-          <div class="col-4">
+          <div class="col-6">
             <form id="user-input">
               <label for="location">Enter your location</label>
               <input id="data-input" type="search" autofocus />
@@ -30,30 +30,30 @@
           </div>
         </div>
         <div class="col-3" id="location">
-          <ul>
-            <li>results for: Bath</li>
-            <li>Monday 18:45</li>
-            <li>clear</li>
-          </ul>
+           
+            <div id="results">results for: Bath</div>
+            <div id ="date">Monday 18:45</div>
+            <div id ="description">clear</div>
+          
         </div>
         <div class="row">
-          <div class="col-1">
+          <div class="col-2" id="pic-icon">
             <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" />
           </div>
           <div class="col-2">
-            <div id="temp-icon">
-              6
+            <div id="temp-icon">6
               <span class="units">
-                <a href="#" id="celsiusB">°C</a>
+                °C
                 <span class="pipe">|</span>
                 <a href="#" id="fahrenheitB">°F</a>
               </span>
             </div>
           </div>
-          <div class="col-1">
+          <div class="col-3"id="info">
             <div>Precipitation:</div>
-            <div>Humidity:</div>
-            <div>Wind::</div>
+              <div>Humidity:</div>
+              <div>Wind</div>
+            </ul>
           </div>
         </div>
       </div>
