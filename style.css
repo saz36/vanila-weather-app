@@ -2,6 +2,7 @@
   max-width: 600px;
   margin-top: 50px;
   margin-left: 20px;
+
   border: 1px solid #dadce0;
 }
 
@@ -26,7 +27,7 @@ button {
 
 #results {
   color: #70757a;
-  display: inline-block;
+
   margin-top: 10px;
   margin-left: -30px;
   padding-left: 50px;
@@ -34,11 +35,10 @@ button {
   font-size: 14px;
   line-height: 22px;
 }
-#date,
-#description {
+#location {
   color: #70757a;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 22px;
   margin-left: -30px;
   padding-left: 50px;
   font-family: arial, sans-serif;
@@ -75,4 +75,7 @@ button {
   display: inline-block;
   font-size: 12px;
   line-height: 16px;
+}
+#location {
+  list-style: none;
 }
