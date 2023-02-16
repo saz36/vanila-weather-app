@@ -25,15 +25,14 @@ button {
   top: 23px;
 }
 
-#results {
+#locate-result {
   color: #70757a;
-
   margin-top: 10px;
   margin-left: -30px;
-  padding-left: 50px;
+  padding-left: 30px;
   font-family: arial, sans-serif;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
 }
 #location {
   color: #70757a;
@@ -45,11 +44,9 @@ button {
 }
 
 #pic-icon {
-  padding-left: 20px;
-  padding-bottom: 20px;
   display: inline-block;
-  height: 60px;
-
+  height: 80px;
+  margin-left: 10px;
   width: 80px;
 }
 #temp-icon {
@@ -59,7 +56,8 @@ button {
   font-weight: 400;
   font-size: 48px;
   color: #202124;
-  padding-bottom: 20px;
+  padding-top: 25px;
+  padding-left: 20px;
 }
 
 .units {
@@ -80,6 +78,7 @@ button {
   list-style: none;
 }
 #link {
-  margin-left: 70px;
-  padding-left: 4px;
+  margin-left: 100px;
+  padding-left: 21px;
+  font-size: 12px;
 }
