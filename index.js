@@ -22,6 +22,9 @@ function showUser(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#pic-icon");
+
+  celciusTemp = response.data.main.temp;
+
   console.log(response.data.weather[0].icon);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -46,8 +49,30 @@ function search1(event) {
   let city = document.querySelector("#data-input").value;
   search(city);
 }
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp-icon");
+  celcius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let fahrenheitTemp = (celciusTemp * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+function showCelciusTemp(event) {
+  event.preventDefault();
+  celcius.classList.add("active");
+  fahrenheit.classList.remove("active");
+  let tempElement = document.querySelector("#temp-icon");
+  tempElement.innerHTML = Math.round(celciusTemp);
+}
+let celciusTemp = null;
 
 let form = document.querySelector("#user-input");
 form.addEventListener("submit", search1);
+
+let fahrenheit = document.querySelector("#fahrenheit-link");
+fahrenheit.addEventListener("click", showFahrenheitTemp);
+
+let celcius = document.querySelector("#celcius-link");
+celcius.addEventListener("click", showCelciusTemp);
 
 search("hawaii");

@@ -78,7 +78,15 @@ button {
   list-style: none;
 }
 #link {
-  margin-left: 100px;
+  margin-left: 60px;
   padding-left: 21px;
   font-size: 12px;
+}
+.temp .active {
+  color: #202124;
+  cursor: default;
+  text-decoration: none;
+}
+.temp .active:hover {
+  text-decoration: none;
 }
