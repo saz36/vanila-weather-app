@@ -79,3 +79,7 @@ button {
 #location {
   list-style: none;
 }
+#link {
+  margin-left: 70px;
+  padding-left: 4px;
+}
