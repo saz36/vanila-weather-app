@@ -8,28 +8,20 @@
 
 h1 {
   color: #0c66eb;
-  font-size: 50px;
-  padding-left: 20px;
+  font-size: 52px;
+  padding-left: 40px;
 }
 form {
-  padding-left: 20px;
-}
-button {
-  margin-left: -65px;
-  margin-top: 1px;
-  margin-bottom: 20px;
-}
-#locate-button {
-  position: relative;
-  left: 45px;
-  top: 23px;
+  padding-left: 40px;
 }
 
 #locate-result {
   color: #70757a;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: -30px;
   padding-left: 30px;
+  padding-bottom: 5px;
+
   font-family: arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -38,16 +30,17 @@ button {
   color: #70757a;
   font-size: 14px;
   line-height: 22px;
-  margin-left: -30px;
-  padding-left: 50px;
+  margin-left: -20px;
+  padding-left: 60px;
   font-family: arial, sans-serif;
 }
 
 #pic-icon {
   display: inline-block;
-  height: 80px;
+  height: 85px;
   margin-left: 10px;
-  width: 80px;
+  margin-bottom: 10px;
+  width: 85px;
 }
 #temp-icon {
   display: inline;
@@ -56,8 +49,6 @@ button {
   font-weight: 400;
   font-size: 48px;
   color: #202124;
-  padding-top: 25px;
-  padding-left: 20px;
 }
 
 .units {

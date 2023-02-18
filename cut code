@@ -1,0 +1,5 @@
+<div class="col-1" id="precise location">
+  <button id="locate-button" class="btn btn-primary">here</button>
+</div>
+button { margin-left: -65px; margin-top: 1px; margin-bottom: 20px; }
+#locate-button { position: relative; left: 45px; top: 23px; }
