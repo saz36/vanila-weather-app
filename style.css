@@ -70,6 +70,7 @@ form {
 }
 #link {
   font-size: 12px;
+  padding-left: 20px;
 }
 .temp .active {
   color: #202124;
