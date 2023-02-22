@@ -24,7 +24,7 @@ function showUser(response) {
   let iconElement = document.querySelector("#pic-icon");
 
   celciusTemp = response.data.main.temp;
-
+  console.log(response.data);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   tempElement.innerHTML = Math.round(response.data.main.temp);
