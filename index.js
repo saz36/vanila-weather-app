@@ -13,6 +13,36 @@ function formatDate(timestamp) {
 
   return `${day} ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#week-forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-4">
+    <div class="card">
+    <div class="card-body">
+    <h5 class="card-title">${day}</h5>
+    <p class="card-text ">
+    <i class="fa-solid fa-temperature-arrow-up"></i>
+    Highest 5<span class ="units">°C</span>
+    <h6>TEMPERATURE
+    <span class ="units">°C<span class ="pipe">|</span>°F</span>
+    </h6> 
+    Lowest -3<span class ="units">°C</span>
+    <i class="fa-solid fa-temperature-arrow-down"></i>  
+    </p>            
+    </div>
+    </div>
+    </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function showUser(response) {
   let descriptionElement = document.querySelector("#description");
@@ -22,6 +52,8 @@ function showUser(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#pic-icon");
+
+  displayForecast();
 
   celciusTemp = response.data.main.temp;
   console.log(response.data);
