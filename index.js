@@ -19,6 +19,7 @@ function formatDay(timestamp) {
   let days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
   return days[day];
 }
+
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#week-forecast");
@@ -36,8 +37,7 @@ function displayForecast(response) {
     <i class="fa-solid fa-temperature-arrow-up"></i>
     ${Math.round(forecastDay.temp.max)}<span class ="units">°C</span>
     <h6>TEMPERATURE ${Math.round(forecastDay.temp.day)}
-    <span class ="units">°C<span class ="pipe">|</span>°F</span>
-    </h6> 
+    <span class ="units">°C</h6> 
      ${Math.round(forecastDay.temp.min)}<span class ="units">°C</span>
     <i class="fa-solid fa-temperature-arrow-down"></i>  
     </p>            
@@ -66,7 +66,10 @@ function showUser(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#pic-icon");
+  let sunriseElement = document.querySelector("#Sunrise");
+  let sunsetElement = document.querySelector("#Sunset");
   console.log(response);
+
   celciusTemp = response.data.main.temp;
 
   cityElement.innerHTML = response.data.name;
@@ -79,6 +82,8 @@ function showUser(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  sunriseElement.innerHTML = formatDate(response.data.sys.sunrise * 1000);
+  sunsetElement.innerHTML = formatDate(response.data.sys.sunset * 1000);
   getForecast(response.data.coord);
 }
 
@@ -133,4 +138,4 @@ fahrenheit.addEventListener("click", showFahrenheitTemp);
 let celcius = document.querySelector("#celcius-link");
 celcius.addEventListener("click", showCelciusTemp);
 
-search("hawaii");
+search("bristol");
