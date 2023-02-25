@@ -38,22 +38,23 @@
               <div class="col-2">
                 <input type="submit" value="search" class="btn btn-primary" />
               </div>
-              <div class="col-1">
+              <div class="col-2">
                 <button id="locate" class="btn btn-primary">location</button>
               </div>
             </div>
           </form>
-          <div class="col-5">
-            <ul id="location">
-              <li id="locate-result">
-                Results for: <span id="results"></span>
-              </li>
-              <li>Last updated:<span id="date"></span></li>
-              <li id="description"></li>
-            </ul>
+          <div class="row" id="locate-result">
+            <div class="col-5">Results for: <span id="results"></span></div>
+            <div class="col-5">Last updated:<span id="date"></span></div>
           </div>
-          <div class="row">
-            <div class="col-5">
+          <div class="row" class="information">
+            <div class="col-4">
+              <ul id="info">
+                <li>Wind: <span id="wind"></span>KM/h</li>
+                <li>Humidity: <span id="humidity"></span> %</li>
+              </ul>
+            </div>
+            <div class="col-4">
               <div class="temp">
                 <img src="" id="pic-icon" />
                 <div id="temp-icon"></div>
@@ -62,27 +63,22 @@
                   <span class="pipe">|</span>
                   <a href="#" id="fahrenheit-link">°F</a>
                 </span>
+                <div class="forecast" id="description"></div>
               </div>
             </div>
-            <div class="col-3">
-              <ul id="info">
-                <li>Humidity: <span id="humidity"></span> %</li>
-                <li>Wind: <span id="wind"></span>KM/h</li>
+            <div class="col-4">
+              <ul id="sun">
                 <li>Sunrise: <span id="Sunrise"></span></li>
                 <li>Sunset: <span id="Sunset"></span></li>
               </ul>
             </div>
           </div>
-          <div class="week" id="week-forecast">
-            <div class="row"></div>
-          </div>
+          <div class="week" id="week-forecast"></div>
         </div>
-        <div id="link">
+        <div class="link">
           <a href="https://github.com/saz36/vanila-weather-app" target="_blank"
-            >open-source code </a
-          </div>
-          
-           <div> By S.Chard</div>
+            >open-source code</a
+          >
         </div>
       </div>
     </div>

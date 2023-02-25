@@ -16,29 +16,33 @@ function formatDate(timestamp) {
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
   return days[day];
 }
 
 function displayForecast(response) {
   let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#week-forecast");
   let forecastHTML = `<div class="row">`;
   console.log(response);
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 3) {
       forecastHTML =
         forecastHTML +
         `<div class="col-4">
     <div class="card">
     <div class="card-body">
     <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
-    <p class="card-text ">
+    <p class="card-text">
     <i class="fa-solid fa-temperature-arrow-up"></i>
     ${Math.round(forecastDay.temp.max)}<span class ="units">°C</span>
-    <h6>TEMPERATURE ${Math.round(forecastDay.temp.day)}
-    <span class ="units">°C</h6> 
-     ${Math.round(forecastDay.temp.min)}<span class ="units">°C</span>
+    <h6 id ="week-icons"> ${Math.round(forecastDay.temp.day)} 
+    <span class ="units-middle">°C 
+    <img class="icons" src = "http://openweathermap.org/img/wn/${
+      forecastDay.weather[0].icon
+    }@2x.png" /></h6> 
+    ${Math.round(forecastDay.temp.min)}<span class ="units">°C</span>
     <i class="fa-solid fa-temperature-arrow-down"></i>  
     </p>            
     </div>
@@ -138,4 +142,4 @@ fahrenheit.addEventListener("click", showFahrenheitTemp);
 let celcius = document.querySelector("#celcius-link");
 celcius.addEventListener("click", showCelciusTemp);
 
-search("bristol");
+search("london");

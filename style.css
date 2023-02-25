@@ -13,26 +13,18 @@ h1 {
 }
 form {
   padding-left: 40px;
+  padding-bottom: 12px;
 }
 
 #locate-result {
   color: #70757a;
-  margin-top: 20px;
-  margin-left: -30px;
+  margin-top: 5px;
   padding-left: 30px;
-  padding-bottom: 5px;
-
+  padding-bottom: 10px;
+  text-align: center;
   font-family: arial, sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-}
-#location {
-  color: #70757a;
   font-size: 14px;
   line-height: 22px;
-  margin-left: -20px;
-  padding-left: 60px;
-  font-family: arial, sans-serif;
 }
 
 #pic-icon {
@@ -59,16 +51,30 @@ form {
   left: -4px;
 }
 #info {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+#info,
+#sun {
   list-style: none;
   color: #70757a;
-  display: inline-block;
+  text-align: justify;
   font-size: 12px;
   line-height: 16px;
 }
-#location {
+#sun {
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.forecast {
+  font-size: 14px;
+  text-align: center;
+  margin-top: -32px;
+  margin-left: 20px;
   list-style: none;
 }
-#link {
+
+.link {
   font-size: 12px;
   padding-left: 20px;
 }
@@ -86,15 +92,26 @@ form {
   text-align: center;
 }
 .week h5 {
-  color: #7b71c3;
-  font-size: 10px;
+  color: #6350e7;
+  font-size: 14px;
 }
 .week h6 {
   color: #ef6531;
+}
+
+.icons {
+  height: 50px;
+  width: 50px;
 }
 .units {
   position: relative;
   font-size: 10px;
   top: -4px;
   left: 1px;
+}
+.units-middle {
+  position: relative;
+  font-size: 10px;
+  top: -4px;
+  left: -4px;
 }
