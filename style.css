@@ -2,7 +2,6 @@
   max-width: 600px;
   margin-top: 50px;
   margin-left: 20px;
-
   border: 1px solid #dadce0;
 }
 
@@ -72,6 +71,7 @@ form {
   font-size: 12px;
   padding-left: 20px;
 }
+
 .temp .active {
   color: #202124;
   cursor: default;

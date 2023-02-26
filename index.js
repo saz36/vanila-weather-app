@@ -38,7 +38,7 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#week-forecast");
   let forecastHTML = `<div class="row">`;
-  console.log(response);
+
   forecast.forEach(function (forecastDay, index) {
     if (index < 4) {
       forecastHTML =
@@ -48,16 +48,18 @@ function displayForecast(response) {
     <div class="card-body">
     <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
     <p class="card-text">
-    <i class="fa-solid fa-temperature-arrow-up"></i>
-    ${Math.round(forecastDay.temp.max)}<span class ="units">°C</span>
+    <i class="fa-solid fa-temperature-arrow-up"></i>   ${Math.round(
+      forecastDay.temp.max
+    )}<span class ="units">°C</span>
     <h6 id ="week-icons"> ${Math.round(forecastDay.temp.day)} 
     <span class ="units-middle">°C 
     <img class="icons" src = "http://openweathermap.org/img/wn/${
       forecastDay.weather[0].icon
     }@2x.png" /></h6>
     <h4 id= "descriptionWeek">${forecastDay.weather[0].description}</h4> 
-    ${Math.round(forecastDay.temp.min)}<span class ="units">°C</span>
-    <i class="fa-solid fa-temperature-arrow-down"></i>  
+    ${Math.round(
+      forecastDay.temp.min
+    )}<span class ="units">°C</span>   <i class="fa-solid fa-temperature-arrow-down"></i>  
     </p>            
     </div>
     </div>
@@ -73,7 +75,6 @@ function getForecast(coordinates) {
   let apiKey = "b95f179627c8dd37f41e1be6e3250e19";
   let weathUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
 
-  console.log(coordinates);
   axios.get(weathUrl).then(displayForecast);
 }
 function showUser(response) {
@@ -86,7 +87,6 @@ function showUser(response) {
   let iconElement = document.querySelector("#pic-icon");
   let sunriseElement = document.querySelector("#Sunrise");
   let sunsetElement = document.querySelector("#Sunset");
-  console.log(response);
 
   celciusTemp = response.data.main.temp;
 
