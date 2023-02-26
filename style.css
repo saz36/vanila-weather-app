@@ -18,7 +18,7 @@ form {
 
 #locate-result {
   color: #70757a;
-  margin-top: 5px;
+  margin-top: 8px;
   padding-left: 30px;
   padding-bottom: 10px;
   text-align: center;
@@ -26,46 +26,40 @@ form {
   font-size: 14px;
   line-height: 22px;
 }
-
+.information {
+  padding-top: 10px;
+}
 #pic-icon {
-  display: inline-block;
-  height: 85px;
-  margin-left: 20px;
+  height: 80px;
+  width: 80px;
   margin-bottom: 20px;
-  width: 85px;
+}
+.info {
+  margin-left: 24px;
+}
+.info,
+.sun {
+  list-style: none;
+  color: #70757a;
+  text-align: justify;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 10px;
+}
+.temp {
+  margin-left: -6px;
 }
 #temp-icon {
   display: inline;
-
   font-family: Google Sans, arial, sans-serif;
   font-weight: 400;
   font-size: 48px;
   color: #202124;
 }
+.sun {
+  margin-left: -8px;
+}
 
-.units {
-  font-size: 13px;
-  line-height: 24px;
-  position: relative;
-  bottom: 25px;
-  left: -4px;
-}
-#info {
-  margin-top: 10px;
-  margin-left: 20px;
-}
-#info,
-#sun {
-  list-style: none;
-  color: #70757a;
-  text-align: justify;
-  font-size: 12px;
-  line-height: 16px;
-}
-#sun {
-  margin-top: 10px;
-  margin-right: 20px;
-}
 .forecast {
   font-size: 14px;
   text-align: center;
@@ -88,7 +82,7 @@ form {
 }
 .week {
   margin: 0 auto;
-  padding: 25px 50px 25px 50px;
+  padding: 25px 10px;
   text-align: center;
 }
 .week h5 {
@@ -98,16 +92,25 @@ form {
 .week h6 {
   color: #ef6531;
 }
-
+#descriptionWeek {
+  font-size: 13px;
+}
 .icons {
   height: 50px;
   width: 50px;
 }
+
 .units {
   position: relative;
   font-size: 10px;
   top: -4px;
   left: 1px;
+}
+.main-units {
+  position: relative;
+  font-size: 10px;
+  top: -27px;
+  left: -1px;
 }
 .units-middle {
   position: relative;

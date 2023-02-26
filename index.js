@@ -19,6 +19,19 @@ function formatDay(timestamp) {
   let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
   return days[day];
 }
+function formatTime(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return ` ${hours}:${minutes}`;
+}
 
 function displayForecast(response) {
   let forecast = response.data.daily;
@@ -27,10 +40,10 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
   console.log(response);
   forecast.forEach(function (forecastDay, index) {
-    if (index < 3) {
+    if (index < 4) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-4">
+        `<div class="col-3">
     <div class="card">
     <div class="card-body">
     <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
@@ -41,7 +54,8 @@ function displayForecast(response) {
     <span class ="units-middle">°C 
     <img class="icons" src = "http://openweathermap.org/img/wn/${
       forecastDay.weather[0].icon
-    }@2x.png" /></h6> 
+    }@2x.png" /></h6>
+    <h4 id= "descriptionWeek">${forecastDay.weather[0].description}</h4> 
     ${Math.round(forecastDay.temp.min)}<span class ="units">°C</span>
     <i class="fa-solid fa-temperature-arrow-down"></i>  
     </p>            
@@ -86,8 +100,8 @@ function showUser(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  sunriseElement.innerHTML = formatDate(response.data.sys.sunrise * 1000);
-  sunsetElement.innerHTML = formatDate(response.data.sys.sunset * 1000);
+  sunriseElement.innerHTML = formatTime(response.data.sys.sunrise * 1000);
+  sunsetElement.innerHTML = formatTime(response.data.sys.sunset * 1000);
   getForecast(response.data.coord);
 }
 
